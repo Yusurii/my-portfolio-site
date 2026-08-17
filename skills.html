@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills — Muhammad Yusri Bin Rosli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<nav>
+  <div class="logo"><span class="mark"></span>M.Y.R.</div>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html" class="active">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="burst"></div>
+  <div class="page-header-inner">
+    <span class="num">PART 03 /</span>
+    <h1>Skills</h1>
+  </div>
+</div>
+
+<!-- ============================================================
+     SKILLS GRID
+     Each .skill-card below is one skill. To add a new skill, copy
+     an entire <div class="skill-card">...</div> block and paste it
+     before </div> that closes .skills-grid. To remove one, delete
+     its whole block.
+
+     EDIT inside each card:
+       .tag   -> a short category label (e.g. "Language", "Tool")
+       <h3>   -> the skill name
+       <p>    -> one line describing your level / experience
+       width in the .bar span -> how "full" the bar looks, 0-100%
+============================================================= -->
+<section class="page-content">
+  <div class="skills-grid" data-reveal>
+
+    <!-- Skill card 1 -->
+    <div class="skill-card">
+      <span class="tag">Category</span>
+      <h3>Skill One</h3>
+      <p>Short description of this skill or area of study goes here.</p>
+      <div class="bar"><span style="width:70%"></span></div>
+    </div>
+
+    <!-- Skill card 2 -->
+    <div class="skill-card">
+      <span class="tag">Category</span>
+      <h3>Skill Two</h3>
+      <p>Short description of this skill or area of study goes here.</p>
+      <div class="bar"><span style="width:55%"></span></div>
+    </div>
+
+    <!-- Skill card 3 -->
+    <div class="skill-card">
+      <span class="tag">Category</span>
+      <h3>Skill Three</h3>
+      <p>Short description of this skill or area of study goes here.</p>
+      <div class="bar"><span style="width:40%"></span></div>
+    </div>
+
+    <!-- Add more skill cards here by copying one of the blocks above -->
+
+  </div>
+</section>
+
+<footer>Muhammad Yusri Bin Rosli — Portfolio © 2026</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+  },{threshold:0.15});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

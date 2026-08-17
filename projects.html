@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Muhammad Yusri Bin Rosli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<nav>
+  <div class="logo"><span class="mark"></span>M.Y.R.</div>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="burst"></div>
+  <div class="page-header-inner">
+    <span class="num">PART 04 /</span>
+    <h1>Projects</h1>
+  </div>
+</div>
+
+<!-- ============================================================
+     PROJECTS LIST
+     Each .proj row is a clickable card that links to its own page
+     (project1.html, project2.html, project3.html). Clicking one
+     takes you to that project's detail page.
+
+     EDIT inside each row:
+       <h3>          -> project name
+       .desc text    -> one-line summary shown in the list
+       href          -> which detail page it opens (only change
+                        this if you rename/add detail page files)
+
+     To add a project 4: duplicate project3.html as project4.html,
+     then copy a whole <a class="proj">...</a> block below, change
+     its "03" to "04" and point href to "project4.html".
+============================================================= -->
+<section class="projects page-content">
+  <div class="proj-list" data-reveal>
+
+    <!-- Project 1 -->
+    <a href="project1.html" class="proj">
+      <div class="idx">01</div>
+      <div>
+        <h3>Project Name One</h3>
+        <div class="desc">Placeholder description — swap in details about what this project does.</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <!-- Project 2 -->
+    <a href="project2.html" class="proj">
+      <div class="idx">02</div>
+      <div>
+        <h3>Project Name Two</h3>
+        <div class="desc">Placeholder description — swap in details about what this project does.</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <!-- Project 3 -->
+    <a href="project3.html" class="proj">
+      <div class="idx">03</div>
+      <div>
+        <h3>Project Name Three</h3>
+        <div class="desc">Placeholder description — swap in details about what this project does.</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+
+    <!-- Add more project rows here, pointing at new project4.html etc -->
+
+  </div>
+</section>
+
+<footer>Muhammad Yusri Bin Rosli — Portfolio © 2026</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+  },{threshold:0.15});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

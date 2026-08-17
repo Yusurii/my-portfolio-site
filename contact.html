@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Muhammad Yusri Bin Rosli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<nav>
+  <div class="logo"><span class="mark"></span>M.Y.R.</div>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="burst"></div>
+  <div class="page-header-inner">
+    <span class="num">PART 05 /</span>
+    <h1>Contact</h1>
+  </div>
+</div>
+
+<!-- ============================================================
+     CONTACT SECTION
+     EDIT: the intro paragraph below.
+     EDIT: the mailto link — replace your.email@example.com with
+     your real email.
+     EDIT: the LinkedIn / GitHub href="#" links with your real
+     profile URLs.
+
+     Note on the form further down: it's a placeholder only — it
+     doesn't actually send anything yet, since a plain HTML page
+     can't send email by itself. If you want it to really work,
+     tell me and I'll wire it up to a form service (e.g. Formspree)
+     or turn it into a plain mailto link instead.
+============================================================= -->
+<section class="contact page-content">
+  <p class="hero-desc" data-reveal style="margin-left:auto;margin-right:auto;">Have an opportunity, a project, or just want to talk about study grinds and side quests? My inbox is always open.</p>
+
+  <div class="contact-links" data-reveal style="margin-top:2rem;">
+    <a href="mailto:your.email@example.com" class="btn solid">Email Me</a>
+    <a href="#" class="btn ghost">LinkedIn</a>
+    <a href="#" class="btn ghost">GitHub</a>
+  </div>
+
+  <!-- Placeholder contact form — visual only for now, see note above -->
+  <form class="contact-form" data-reveal style="margin-top:3rem;">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com">
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="What's up?"></textarea>
+
+    <button type="submit" class="btn solid">Send Message</button>
+  </form>
+
+</section>
+
+<footer>Muhammad Yusri Bin Rosli — Portfolio © 2026</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+  },{threshold:0.15});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

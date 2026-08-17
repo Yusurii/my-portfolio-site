@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Yusri Bin Rosli — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ============================================================
+     NAV — same block is copy-pasted on every page.
+     If you rename a page, update its href here AND on every
+     other page's nav block, and move class="active" to match.
+============================================================= -->
+<nav>
+  <div class="logo"><span class="mark"></span>YUSURII</div>
+  <div class="navlinks">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO — the big introduction section.
+     EDIT: your name is split across 3 lines in the <h1> below.
+     EDIT: "Currently: Student" — change to your current status.
+     EDIT: the paragraph under hero-desc — your intro blurb.
+     EDIT: the two button links if you want them to go elsewhere.
+============================================================= -->
+<section class="hero">
+  <div class="hero-slash"><div class="bar"></div></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="eyebrow"><span class="jp">冒険</span> // Part 1: The Portfolio</span>
+      <h1>Yusurii</h1><br>
+      <h2>Muhamamd Yusri Bin Rosli</h2>
+      <div class="hero-role">Currently: <span>Student in IT APPLICATION DEVELOPMENT</span></div>
+      <p class="hero-desc">Building things one stand at a time — currently studying, always shipping side projects, and looking for the next adventure.</p>
+      <div class="hero-cta">
+        <a href="projects.html" class="btn solid">View Work</a>
+        <a href="contact.html" class="btn ghost">Get In Touch</a>
+      </div>
+    </div>
+    <!-- Decorative "stand card" — purely visual, no need to edit -->
+    <div class="hero-card">
+      <div class="star"></div>
+      <div class="hero-card-photo-img"><img src="CrazyDiamond.png" alt="Crazy Diamond"></div>
+      <div class="card-label">Stand Name</div>
+      <div class="card-name">Crazy Diamond</div>
+      <div class="card-num"><span>PART 4</span><span>LV. 20</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>Muhammad Yusri Bin Rosli — Portfolio © 2026</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+  },{threshold:0.15});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
