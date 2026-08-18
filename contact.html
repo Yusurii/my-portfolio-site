@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Muhammad Yusri Bin Rosli</title>
+<title>Yusurii - Contact</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -77,6 +77,13 @@
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
   },{threshold:0.15});
   document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+  document.getElementById('hamburgerBtn')?.addEventListener('click', ()=>{
+    document.getElementById('navlinks').classList.toggle('open');
+  });
+  document.querySelectorAll('#navlinks a').forEach(link=>{
+    link.addEventListener('click', ()=> document.getElementById('navlinks').classList.remove('open'));
+  });
 </script>
 
 </body>
